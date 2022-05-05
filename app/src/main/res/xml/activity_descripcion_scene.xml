@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:autoTransition="animateToStart">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/imageView" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/imageView"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline23"
+            android:layout_width="178dp"
+            android:layout_height="179dp"
+            motion:layout_constraintBottom_toTopOf="@+id/guideline21"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/guideline22"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/txtNombre"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toTopOf="@+id/guideline21"
+            motion:layout_constraintStart_toStartOf="@+id/guideline22"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline23"
+            motion:layout_constraintBottom_toTopOf="@+id/guideline24"
+            motion:layout_constraintVertical_bias="0.519"
+            motion:layout_constraintHorizontal_bias="0.497" />
+        <Constraint
+            android:id="@+id/txtDescripcion"
+            android:layout_width="305dp"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toTopOf="@+id/guideline24"
+            motion:layout_constraintStart_toStartOf="@+id/guideline22"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline23"
+            motion:layout_constraintBottom_toTopOf="@+id/guideline25"
+            motion:layout_constraintVertical_bias="0.509"
+            motion:layout_constraintHorizontal_bias="0.504" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/txtNombre"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="@+id/guideline24"
+            motion:layout_constraintVertical_bias="0.519"
+            motion:layout_constraintTop_toTopOf="@+id/guideline21"
+            motion:layout_constraintHorizontal_bias="0.497"
+            motion:layout_constraintStart_toStartOf="@+id/guideline22"
+            android:rotationX="60"
+            android:rotationY="33"
+            android:rotation="-58" />
+        <Constraint
+            android:id="@+id/txtDescripcion"
+            motion:layout_constraintEnd_toStartOf="@+id/guideline23"
+            android:layout_width="305dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="@+id/guideline25"
+            motion:layout_constraintVertical_bias="0.509"
+            motion:layout_constraintTop_toTopOf="@+id/guideline24"
+            motion:layout_constraintHorizontal_bias="0.504"
+            motion:layout_constraintStart_toStartOf="@+id/guideline22"
+            android:rotationX="52"
+            android:rotationY="-42"
+            android:rotation="36" />
+    </ConstraintSet>
+</MotionScene>
